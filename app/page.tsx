@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <HeaderWithHero>
-        <div className="text-white">sdf</div>
+        <div className="text-white"></div>
       </HeaderWithHero>
     </main>
   );
