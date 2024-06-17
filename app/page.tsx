@@ -3,9 +3,10 @@ import HeaderWithHero from "@/components/Navbar/HeaderWithHero";
 
 export default function Home() {
   return (
-    <HeaderWithHero>
-      sfdf
-    </HeaderWithHero>
+    <main>
+      <HeaderWithHero>
+        <div className="text-white">sdf</div>
+      </HeaderWithHero>
+    </main>
   );
 }
-        
