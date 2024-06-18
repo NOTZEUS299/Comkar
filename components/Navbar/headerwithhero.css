@@ -1,0 +1,82 @@
+#mainHeader {
+  position: absolute;
+  top: calc(5% + 0.5375em);
+  left: calc(5% + 0.5375em + 3.5rem);
+  width: calc(89% - 7rem);
+}
+
+#headerLinks {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+#headerLinks::after {
+  content: "";
+  position: absolute;
+  /* background: #000; */
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transition: all 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+  background: url(../../public/assets/Lightning.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  display: none;
+}
+
+#headerLinks:hover::after {
+  display: block;
+}
+
+#headerLinks::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: #f3f3f3;
+  transition: all 0.3s ease-in-out;
+}
+
+#headerLinks:hover::before {
+  width: 100%;
+  left: 0;
+  animation: shaking 2s linear infinite;
+}
+
+@keyframes shaking {
+  0% {
+    transform: translate(0, 0);
+    background: #e3e3e3;
+  }
+  16.67% {
+    transform: translate(2px, 0.5px);
+    background: #ffffff;
+  }
+  33.34% {
+    transform: translate(0, 0);
+    background: #e3e3e3;
+  }
+  50.01% {
+    transform: translate(0, 1px);
+    background: #ffffff;
+  }
+  66.68% {
+    transform: translate(0, 0);
+    background: #e3e3e3;
+  }
+  83.35% {
+    transform: translate(1.2px, -0.5px);
+    background: #ffffff;
+  }
+  100% {
+    transform: translate(0, 0);
+    background: #e3e3e3;
+  }
+}
