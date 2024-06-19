@@ -13,7 +13,7 @@ const CardTypeOne = (props: {
   return (
     <Card
       className={`w-[${width}] h-[${height}] ${
-        active ? "bg-black" : "bg-transparent"
+        active ? "bg-white" : "bg-transparent"
       } rounded-none overflow-visible`}
       shadow="sm"
       isPressable
