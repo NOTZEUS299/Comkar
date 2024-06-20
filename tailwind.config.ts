@@ -15,6 +15,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        'montserrat': ["Montserrat", "sans-serif"]
+      }
     },
   },
   darkMode: "class",
@@ -61,6 +64,7 @@ const config: Config = {
               large:
                 "0px 0px 30px 0px rgb(0 0 0 / 0.04), 0px 30px 60px 0px rgb(0 0 0 / 0.12), 0px 0px 1px 0px rgb(0 0 0 / 0.3)",
             },
+            
           },
         },
         dark: {
