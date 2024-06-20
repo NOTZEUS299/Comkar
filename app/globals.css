@@ -1,3 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#routine-simplified {
+  text-shadow: 0 0 3vw #f3f3f3;
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 0.5px #232323, 0 0 0.2px #232323, 0 0 0.3px #232323,
+      0 0 0.3px #232323, 0 0 0.4px #242424, 0.5px 0.5px 0.5px #000000;
+    color: #ffffff;
+  }
+  50% {
+    text-shadow: 0 0 0.2px #232323, 0 0 0.7px #232323, 0 0 0.1px #232323,
+      0 0 0.4px #232323, 0 0 0.2px #e3e3e3, 0.5px 0.5px 0.5px #242424;
+    color: #f3f3f3;
+  }
+}
