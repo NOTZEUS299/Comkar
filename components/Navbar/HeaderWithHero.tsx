@@ -1,5 +1,7 @@
 import { Link, Button } from "@nextui-org/react";
 import Spline from "@splinetool/react-spline";
+import Calendar from "../Calendar/Calendar"
+import Clock from "../Clock/Clock"
 import "./headerwithhero.css";
 
 const HeaderWithHero = ({ children }: { children: React.ReactNode }) => {
@@ -49,7 +51,7 @@ const HeaderWithHero = ({ children }: { children: React.ReactNode }) => {
         </div>
       </div>
       <div
-        className="w-[75%] h-[40%] absolute bottom-0 right-0 z-20"
+        className="w-[75%] h-[40%] flex justify-center items-center absolute bottom-0 right-0 z-20"
         style={{
           background: "url(./assets/herosectionbg.png)",
           backgroundSize: "100vmax",
@@ -57,7 +59,12 @@ const HeaderWithHero = ({ children }: { children: React.ReactNode }) => {
           backgroundRepeat: "no-repeat",
           borderRadius: "85% 0 0 0",
         }}
-      ></div>
+      >
+        <div id="time-date-and-calendar-container" className="w-auto h-[70%] absolute right-0 z-40">
+          <Clock/>
+          <Calendar/>
+        </div>
+      </div>
     </div>
   );
 };
