@@ -1,10 +1,26 @@
+"use client";
+
 import { Link, Button } from "@nextui-org/react";
 import Spline from "@splinetool/react-spline";
-import Calendar from "../Calendar/Calendar"
-import Clock from "../Clock/Clock"
+import Calendar from "../Calendar/Calendar";
+import Clock from "../Clock/Clock";
 import "./headerwithhero.css";
+import useGeolocation from "react-hook-geolocation";
 
-const HeaderWithHero = ({ children }: { children: React.ReactNode }) => {
+const HeaderWithHero = ({children}: { children: React.ReactNode }) => {
+  // try {
+  //   fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${geolocation?.latitude}&longitude=${geolocation?.longitude}&localityLanguage=en`)
+  //     .then((response) => response.json())
+  //     .then((json) => console.log(json));
+  // } catch (error) {
+  //   console.log(error);
+  // }
+
+  const geolocation = useGeolocation();
+  console.log(geolocation);
+
+
+
   return (
     <div
       className="w-full h-[100vh] relative flex justify-center items-center"
@@ -15,6 +31,7 @@ const HeaderWithHero = ({ children }: { children: React.ReactNode }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      ``
       <nav id="mainHeader" className="flex justify-between items-center z-40">
         <div className="flex justify-center items-center">
           <img
@@ -60,9 +77,16 @@ const HeaderWithHero = ({ children }: { children: React.ReactNode }) => {
           borderRadius: "85% 0 0 0",
         }}
       >
-        <div id="time-date-and-calendar-container" className="w-auto h-[70%] absolute right-0 z-40">
-          <Clock/>
-          <Calendar/>
+        <div
+          id="time-date-and-calendar-container"
+          className="w-auto h-[70%] absolute right-0 z-40"
+        >
+          <div id="TimeNDate-container">
+            <Clock />
+          </div>
+          <div id="Calendar-container">
+            <Calendar />
+          </div>
         </div>
       </div>
     </div>
