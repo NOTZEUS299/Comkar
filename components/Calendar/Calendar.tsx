@@ -6,10 +6,12 @@ import {today, getLocalTimeZone} from "@internationalized/date";
 
 export default function App() {
   return (
-    <Calendar 
+    <Calendar
+      className="w-full h-full flex justify-center items-center"
       aria-label="Date (Read Only)" 
       value={today(getLocalTimeZone())} 
-      isReadOnly 
+      isReadOnly
+      style={{background: "#ffffff"}}
     />
   );
 }
